@@ -1,0 +1,6 @@
+maxcontainerdistance: 16
+costtocreate: 100
+costtoexpand: 50
+refundamount: 100
+refundamountperexpansion: 50
+defaultrows: 3

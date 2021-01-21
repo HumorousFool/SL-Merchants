@@ -1,0 +1,49 @@
+name: SL-Merchants
+version: 1.0
+description: Customizeable merchants with adjustable prices.
+author: HumorousFool
+
+main: humorousfool.slmerchants.SLMerchants
+depend: [Citizens, Vault]
+
+commands:
+  slmerchants:
+    description: Main plugin command.
+    aliases: ["slm"]
+    permission: slmerchants.admin
+    usage: "Subcommands: create, delete, list, reload, wand"
+
+permissions:
+  slmerchants.admin.*:
+    description: Gives access to SL-Merchants admin commands.
+    children:
+      slmerchants.admin.forcedelete: true
+      slmerchants.admin.list: true
+  slmerchatns.admin.forcedelete:
+    description: Allows you to delete any player's shops.
+  slmerchants.admin.list:
+    description: Allows you to list all player shops.
+  slmerchants.user.*:
+    description: Allows you to open shops.
+    children:
+      slmerchants.user.create: true
+      slmerchants.user.wand: true
+      slmerchants.user.buy: true
+      slmerchants.user.sell: true
+      slmerchants.user.list: true
+      slmerchants.user.delete: true
+  slmerchants.user.open:
+    description: Allows you to open player shops.
+  slmerchants.user.wand:
+    description: Allows you to attach chests to player shops.
+  slmerchants.user.buy:
+    description: Allows you to buy at player shops.
+    default: true
+  slmerchants.user.sell:
+    description: Allows you to open player shops.
+    default: true
+  slmerchants.user.list:
+    description: Allows you to list your own shops.
+    default: true
+  slmerchants.user.delete:
+    description: Allows you to delete your own shops.
